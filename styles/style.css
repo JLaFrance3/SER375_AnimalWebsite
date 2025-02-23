@@ -171,14 +171,10 @@ h2 {
     padding: 16px 0px 16px 0px;
 }
 
-.event-card >* {
-    text-decoration: none;
-    color: inherit;
-}
-
 .event-card:hover {
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 .today-date {

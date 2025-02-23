@@ -8,10 +8,9 @@ const images = [
 ]
 
 //Accepts a 1 or -1 from button onClick to get next or previous image
-function changeSlide(addToIndex) {
-    slideshowIndex += addToIndex
+function changeSlide(step) {
+    slideshowIndex += step
     slideshowIndex = ((slideshowIndex % images.length) + images.length) % images.length
-    console.log(slideshowIndex)
     slide.src = images[slideshowIndex]
     slideCounter.innerText = `${slideshowIndex + 1}/${images.length}`
 }
@@ -35,31 +34,33 @@ const events = [
 events.forEach(event => {
     if (event.date >= todayDate) {
         if (upcomingEvents.innerHTML === "") {
+            upcomingEvents.classList.add("events-flex-column")
             upcomingEvents.innerHTML = "<h3>Upcoming Events</h3>"
         }
         upcomingEvents.innerHTML += `
             <div>
-                <h3 class="event-card">
-                    <a href=${event.url} target="_blank">
-                        ${event.name} - ${event.date.toLocaleDateString()}
-                    </a>
+                <h3 class="event-card" onClick="openLink('${event.url}')">
+                    ${event.name} - ${event.date.toLocaleDateString()}
                 </h3>
             </div>
         `
     }
     else {
         if (pastEvents.innerHTML === "") {
+            pastEvents.classList.add("events-flex-column")
             pastEvents.innerHTML = "<h3>Past Events</h3>"
         }
         pastEvents.innerHTML += `
             <div>
-                <h3 class="event-card">
-                    <a href=${event.url} target="_blank">
-                        ${event.name} - ${event.date.toLocaleDateString()}
-                    </a>
+                <h3 class="event-card" onClick="openLink('${event.url}')">
+                    ${event.name} - ${event.date.toLocaleDateString()}
                 </h3>
             </div>
         `
     }
 })
+
+function openLink(url) {
+    window.open(url, "_blank")
+}
 

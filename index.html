@@ -22,7 +22,7 @@
                 <p class="about-paragraph">The bioluminescence is produced by a bacteria absorbed directly from the seawater. Adult male Seadevils don't have lures and also don't eat. The females use their lures to catch crustaceans and small fish. The females are generally much bigger than males and have distended stomachs.</p>
                 <p class="about-paragraph">Click <a class="link" href="https://en.wikipedia.org/wiki/Black_seadevil">here</a> to learn more about the Black Seadevil Anglerfish at Wikipedia.</p>
                 <h2 id="images">Images</h2>
-                <img class="slideshow-image" src="" alt="Amglerfish" id="current-slide">
+                <img class="slideshow-image" src="" alt="Amglerfish" id="current-slide" ondblclick="changeSlide(1)">
                 <div class="slideshow-button-container">
                     <button class="slideshow-button" onClick="changeSlide(-1)"><</button>
                     <p id = slide-counter>0/0</p>
@@ -36,8 +36,8 @@
                     <h2 id="events" class="no-margin">Events</h2>
                     <p class="today-date">Today's Date:</p>
                     <p id="date-display"></p>
-                    <div class="events-flex-column" id="past-events"></div>
-                    <div class="events-flex-column" id="upcoming-events"></div>
+                    <div id="past-events"></div>
+                    <div id="upcoming-events"></div>
                 </div>
             </div>
         </div>
