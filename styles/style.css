@@ -144,10 +144,46 @@ h2 {
     border-style: solid;
 }
 
+.event-container {
+    width: 100%;
+    border: 1px solid black;
+    padding: 16px;
+}
+
+.event-container p {
+    display: inline-block;
+}
+
+.events-flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 20px;
+}
+
+.event-card {
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 16px 0px 16px 0px;
+}
+
+.event-card >* {
+    text-decoration: none;
+    color: inherit;
+}
+
+.event-card:hover {
+    background-color: black;
+    color: white;
+}
+
 .today-date {
     margin: 0;
     margin-top: 5px;
-    margin-bottom: 20px;
     font-weight: bold;
 }
 

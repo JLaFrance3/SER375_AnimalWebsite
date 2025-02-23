@@ -22,21 +22,22 @@
                 <p class="about-paragraph">The bioluminescence is produced by a bacteria absorbed directly from the seawater. Adult male Seadevils don't have lures and also don't eat. The females use their lures to catch crustaceans and small fish. The females are generally much bigger than males and have distended stomachs.</p>
                 <p class="about-paragraph">Click <a class="link" href="https://en.wikipedia.org/wiki/Black_seadevil">here</a> to learn more about the Black Seadevil Anglerfish at Wikipedia.</p>
                 <h2 id="images">Images</h2>
-                <img class="slideshow-image" src="images/FishInfo.jpg" alt="Fish with info">
+                <img class="slideshow-image" src="" alt="Amglerfish" id="current-slide">
                 <div class="slideshow-button-container">
-                    <button class="slideshow-button"><</button>
-                    <p>0/0</p>
-                    <button class="slideshow-button">></button>
+                    <button class="slideshow-button" onClick="changeSlide(-1)"><</button>
+                    <p id = slide-counter>0/0</p>
+                    <button class="slideshow-button" onClick="changeSlide(1)">></button>
                 </div>
                 <h2 id="videos">Videos</h2>
                 <div class="video-container">
                     <iframe class="video" src="https://www.youtube.com/embed/I4QtYfK6F-0" frameborder="0"></iframe>
                 </div>
-                <h2 id="events" class="no-margin">Events</h2>
-                <p class="today-date">Today's Date:</p>
-                <div>
-                    <h3>Past Events</h3>
-                    <h3>Upcoming Events</h3>
+                <div class="event-container">
+                    <h2 id="events" class="no-margin">Events</h2>
+                    <p class="today-date">Today's Date:</p>
+                    <p id="date-display"></p>
+                    <div class="events-flex-column" id="past-events"></div>
+                    <div class="events-flex-column" id="upcoming-events"></div>
                 </div>
             </div>
         </div>
@@ -59,7 +60,7 @@
                 <a href="https://www.youtube.com/@NatGeo">Youtube</a>
             </div>
         </div>
-        
+        <script src="js/script.js"></script>
     </body>
 </html>
 
